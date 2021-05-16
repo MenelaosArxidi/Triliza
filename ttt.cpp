@@ -23,11 +23,21 @@ int main() {
                 winner = "Player 1";
                 y_index = game_y(winner);
                 x_index = game_x(winner);
+                while (a[y_index + x_index] != ' ') {
+                    std::cout << "Already assigned, try a new one.\n";
+                    y_index = game_y(winner);
+                    x_index = game_x(winner);
+                }
                 a[y_index + x_index] = 'X';        
             } else {
                 winner = "Player 2";
                 y_index = game_y(winner);
                 x_index = game_x(winner);
+                while (a[y_index + x_index] != ' ') {
+                    std::cout << "Already assigned, try a new on.\n";
+                    y_index = game_y(winner);
+                    x_index = game_x(winner);
+                }
                 a[y_index + x_index] = 'O';
         
             }
